@@ -7,16 +7,34 @@ from tkinter import *
 
 class App:
 
-  def __init__(self, master):
+	def __init__(self, master):
 
 		frame = Frame(master)
 		frame.pack()
 
-		self.button = Button(frame, text="QUIT", fg="red", bg="yellow", command=frame.quit)
+		self.button = Button(frame, text="QUIT", fg="red", command=frame.quit)
 		self.button.pack(side=LEFT)
 
 		self.randotron = Button(frame, text="randomize?", fg="blue", bg="gray", command=self.randotron)
 		self.randotron.pack(side=LEFT)
+
+print("""#all this e stuff is new
+# http://effbot.org/tkinterbook/entry.htm
+mmaster = Tk()
+		
+e = Entry(mmaster)
+e.pack()
+
+e.focus_set()
+
+def callback():
+	print e.get()
+
+b = Button(mmaster, text="fwomp", width=10, command=callback)
+b.pack()
+
+mainloop()""")
+
 
 	def randotron(self):
 ## this is where the cool stuff goes!!
@@ -33,7 +51,7 @@ class App:
 			i += 1
 
 		print("From section",section,"there are",amount,"problems, which are the following\n")
-		print(problems) 
+		print(problems)
 
 		problemChoice = random.choice(problems)
 		#whoa, random.choice might work!  thanks steve from pyladies!
@@ -45,3 +63,4 @@ root = Tk()
 app = App(root)
 
 root.mainloop()
+root.destroy()
