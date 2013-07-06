@@ -22,6 +22,9 @@ class App:
 		#let's see if this works at all
 		ent = Entry(mmaster)
 		ent.pack()
+		
+		self.ent = Entry(top)
+		self.e.pack(padx=5)
 		ent.focus_set()
 
 		butt = Button(mmaster, text="fwomp", width=10, command=callback)
