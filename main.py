@@ -17,23 +17,16 @@ class App:
 
 		self.randotron = Button(frame, text="randomize?", fg="blue", bg="gray", command=self.randotron)
 		self.randotron.pack(side=LEFT)
+		self.grab_set()
 
-print("""#all this e stuff is new
-# http://effbot.org/tkinterbook/entry.htm
-mmaster = Tk()
-		
-e = Entry(mmaster)
-e.pack()
+		#let's see if this works at all
+		ent = Entry(mmaster)
+		ent.pack()
+		ent.focus_set()
 
-e.focus_set()
-
-def callback():
-	print e.get()
-
-b = Button(mmaster, text="fwomp", width=10, command=callback)
-b.pack()
-
-mainloop()""")
+		butt = Button(mmaster, text="fwomp", width=10, command=callback)
+		butt.pack()
+		mainloop()
 
 
 	def randotron(self):
